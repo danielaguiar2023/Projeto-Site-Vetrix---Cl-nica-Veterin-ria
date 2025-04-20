@@ -1,0 +1,499 @@
+/* Importa fonte Roboto em diferentes pesos do Google Fonts */
+@import url("https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i");
+
+/* Aplica configuração base para html e body */
+html, body {
+  font-family: "Roboto", sans-serif; /* Usa a fonte Roboto como padrão */
+  margin: 0;                     /* Remove margem padrão */
+  padding: 0;                    /* Remove padding padrão */
+  box-sizing: border-box;       /* Inclui borda e padding no cálculo de largura e altura */
+}
+
+/* === TEMPLATE DE SERVIÇOS (4 BOLINHAS) === */
+/* Centraliza texto de conteúdo e parágrafos */
+.tpl-serv-001 .content,
+.tpl-serv-001 p {
+  text-align: center; /* Centraliza horizontalmente */
+}
+
+/* Espaçamento inferior entre colunas de serviço */
+.tpl-serv-001 .col {
+  margin-bottom: 20px; /* Distância abaixo de cada coluna */
+}
+
+/* Estilo para título dentro do template de serviços */
+.tpl-serv-001 .titulo {
+  font-weight: bold; /* Texto em negrito */
+}
+
+/* Descrição em serviços com fonte menor e espaçamento */
+.tpl-serv-001 .decri {
+  font-size: 10px;     /* Fonte reduzida */
+  margin-bottom: 25px; /* Espaço abaixo da descrição */
+}
+
+/* Título principal do template de serviços */
+.tpl-serv-001 h2 {
+  font-size: 30px;          /* Tamanho grande para destaque */
+  text-transform: uppercase; /* Texto em caixa alta */
+  text-align: center;       /* Centralizado */
+}
+
+/* Subtítulo (h3) do template de serviços */
+.tpl-serv-001 h3 {
+  font-size: 18px;          /* Fonte de tamanho médio */
+  text-transform: uppercase; /* Caixa alta */
+  text-align: center;       /* Centralizado */
+  margin-bottom: 60px;      /* Espaço abaixo do subtítulo */
+}
+
+/* Define dimensões padrão para ícones circulares */
+.tpl-serv-001-p-icon,
+.tpl-serv-001-p-icon-pai {
+  width: 100px;  /* Largura fixa */
+  height: 100px; /* Altura fixa */
+}
+
+/* Estilo de bolinha laranja para ícones */
+.tpl-serv-001-p-icon {
+  background-color: #fe8f01; /* Cor laranja viva */
+  border-radius: 50%;        /* Forma circular */
+  display: inline-block;     /* Alinha em linha */
+  position: relative;        /* Permite posicionar elementos filhos */
+  border: 2px solid #000;    /* Borda preta fina */
+  opacity: 0.8;              /* Transparência levemente reduzida */
+  transition: opacity 0.3s;  /* Animação suave de opacidade */
+}
+
+/* Efeito hover para ícones: opacidade total e cursor pointer */
+.tpl-serv-001-p-icon:hover {
+  opacity: 1;       /* Remove transparência */
+  cursor: pointer;  /* Cursor de botão clicável */
+}
+
+/* Conteúdo auxiliar (ícone interno) posicionado no centro */
+.tpl-serv-001-p-icon-aux {
+  display: block;            /* Exibe como bloco */
+  color: #fff;               /* Cor do texto branca */
+  position: absolute;        /* Posicionamento relativo ao pai */
+  top: 50%; left: 50%;       /* Centraliza vertical e horizontal */
+  transform: translate(-50%, -50%); /* Ajusta exatamente ao centro */
+}
+
+/* Remove sublinhado de links internos de ícone auxiliar */
+.tpl-serv-001-p-icon-aux a {
+  text-decoration: none; /* Link sem decoração */
+}
+
+/* Estilo do ícone em si: fonte grande e cor branca */
+.tpl-serv-001-p-icon span {
+  font-size: 50px; /* Tamanho grande para ícone */
+  color: #fff;     /* Branco para contraste */
+}
+
+/* === TEMPLATE DE CONTAINER 1 (4 QUADRADOS COM BEFORE) === */
+/* Ajusta posição vertical geral do container */
+.tpl-cont-002 {
+  transform: translateY(-30px); /* Move 30px para cima */
+}
+
+/* Estilo de links dentro do template: branco */
+.tpl-cont-002 a {
+  color: #fff; /* Cor branca para links */
+}
+
+/* Remove decoração de links em hover */
+.tpl-cont-002 a:hover {
+  text-decoration: none; /* Sem sublinhado */
+}
+
+/* Zera o padding da div direta dentro do container */
+.tpl-cont-002 > div {
+  padding-right: 0; /* Sem espaçamento à direita */
+}
+
+/* Style box base dos quadrados */
+.tpl-cont-002_box {
+  min-height: 200px;       /* Altura mínima de 200px */
+  background-color: #000;  /* Fundo preto */
+  margin-bottom: 20px;     /* Espaço abaixo */
+  position: relative;      /* Para pseudo-elemento posicionar-se */
+}
+
+/* Pseudo-elemento before criando faixa colorida inferior */
+.tpl-cont-002_box::before {
+  content: '';                        /* Elemento vazio */
+  height: 6px;                        /* Altura inicial da barra */
+  position: absolute;                 /* Posicionado dentro da box */
+  bottom: 0; left: 0; right: 0;      /* Ocupa toda largura inferior */
+  background-color: #6bcad2;         /* Cor da barra */
+  transition: height 0.3s cubic-bezier(0.46, 0.03, 0.52, 0.96); /* Animação de expansão */
+}
+
+/* Quando box estiver ativo, pseudo-elemento preenche totalmente */
+.tpl-cont-002_box.ativo::before {
+  height: 100%; /* Barra cresce até a altura total da box */
+}
+
+/* Texto dentro da box: centralizado, branco e com z-index */
+.tpl-cont-002_box p {
+  position: relative;      /* Para garantir legibilidade sobre a barra */
+  color: #fff;             /* Texto branco */
+  text-align: center;      /* Centraliza */
+  padding: 20px;           /* Espaçamento interno */
+  font-size: 21px;         /* Fonte intermediária */
+  font-weight: 200;        /* Negrito leve */
+  z-index: 2;              /* Acima do pseudo-elemento */
+}
+
+/* Título principal dentro do container */
+.tpl-cont-002 h2 {
+  text-align: center; /* Centraliza */
+  font-size: 25px;    /* Tamanho da fonte */
+  font-weight: 800;   /* Negrito forte */
+  margin-top: 0;      /* Remove margem superior */
+  position: relative; /* Para sobrepor a pseudo-barra */
+}
+
+/* === TEMPLATE DE CONTAINER 2 (QUADRADOS COM BOLA) === */
+/* Cores de fundo e texto para variações de colunas */
+.tpl-serv-003 .cor-1 {
+  background-color: #8f8f8f; /* Cinza médio */
+  color: #fff;               /* Texto branco */
+}
+.tpl-serv-003 .cor-2 {
+  background-color: #efefef; /* Cinza claro */
+  color: #8f8f8f;            /* Texto cinza escuro */
+}
+
+/* Espaçamento inferior para colunas md-3 */
+.tpl-serv-003 .col-md-3 {
+  margin-bottom: 20px; /* Espaço abaixo */
+}
+
+/* Cabeçalho circular com imagem e hover */
+.tpl-003_head {
+  height: 200px;          /* Altura fixa */
+  background-color: #aaa; /* Cinza claro */
+  color: #fff;            /* Texto branco */
+  text-align: center;     /* Centraliza conteúdo */
+}
+
+/* Link dentro do cabeçalho mantendo forma circular */
+.tpl-003_head a {
+  position: relative;    /* Para efeito hover */
+  border-radius: 50%;    /* Forma redonda */
+  display: inline-block; /* Para dimensões funcionarem */
+}
+
+/* Pseudo-elemento after para contorno animado */
+.tpl-003_head a::after {
+  content: '';           /* Elemento vazio */
+  position: absolute;    /* Dentro do link */
+  top: 0; bottom: 0;     /* Ocupa toda altura */
+  left: 0; right: 0;     /* Ocupa toda largura */
+  z-index: -1;           /* Atrás do conteúdo */
+  transform: translateY(-85px); /* Move para cima */
+  border-radius: 50%;    /* Forma redonda */
+  transition: all 0.5s;  /* Animação suave */
+}
+
+/* Efeito hover amplia o contorno circular */
+.tpl-003_head a:hover::after {
+  top: -10px;
+  bottom: -10px;
+  left: -10px;
+  right: -10px;
+  background-color: #8f8f8f; /* Cor do contorno */
+}
+
+/* Estilo da imagem dentro do cabeçalho circular */
+.tpl-003_head img {
+  border-radius: 50%;           /* Imagem circular */
+  width: 170px;                 /* Largura fixa */
+  height: 170px;                /* Altura fixa */
+  transform: translateY(-85px); /* Posiciona sobre o contorno */
+}
+
+/* Título (h3) dentro do cabeçalho com deslocamento */
+.tpl-003_head h3 {
+  transform: translateY(-70px); /* Move para cima */
+  text-transform: uppercase;    /* Caixa alta */
+}
+
+/* Corpo do template com padding e cor */
+.tpl-003_corpo {
+  height: 200px;         /* Altura fixa */
+  padding: 30px;         /* Espaçamento interno */
+  background-color: #ccc; /* Cinza médio */
+}
+
+/* Rodapé com links interativos */
+.tpl-003-footer a {
+  position: relative;     /* Para pseudo-elemento */
+  width: 60%;             /* Largura relativa */
+  float: left;            /* Alinha à esquerda */
+  padding: 15px 10px;     /* Espaçamento interno */
+  text-decoration: none;  /* Sem sublinhado */
+  transition: 0.5s;       /* Animações suaves */
+}
+
+/* Pseudo-elemento before no rodapé para fundo animado */
+.tpl-003-footer a::before {
+  content: '';             /* Elemento vazio */
+  position: absolute;      /* Dentro do link */
+  top: 0; bottom: 99%;     /* Altura inicial reduzida */
+  left: 0; right: 0;       /* Ocupa toda largura */
+  background-color: #efefef; /* Cor de fundo */
+  transition: bottom 0.5s; /* Animação de subida */
+}
+
+/* Ao passar hover, anima pseudo-elemento para cobrir */
+.tpl-003-footer a:hover::before {
+  bottom: 0; /* Pseudo-elemento sobe até cobrir todo o link */
+}
+
+/* Texto (span) no rodapé com animação de cor */
+.tpl-003-footer span {
+  z-index: 10;              /* Acima do pseudo-elemento */
+  position: relative;       /* Posicionamento próprio */
+  text-transform: uppercase; /* Caixa alta */
+  font-size: 0.8em;         /* Tamanho menor */
+  transition: color 0.5s;   /* Transição de cor */
+}
+
+/* Efeito hover muda cor do texto */
+.tpl-003-footer a:hover span {
+  color: #8f8f8f; /* Cinza escuro */
+}
+
+/* === TEMPLATE A EMPRESA (4 BOLINHAS À ESQUERDA) === */
+/* Título principal com margens */
+.tpl-emp-004 h2 {
+  margin: 20px 0 30px; /* Margem superior e inferior */
+}
+
+/* Container de imagem sobre com fundo azul */
+.tpl-emp-004_img-sobre {
+  background: blue;      /* Fundo azul temporário */
+  width: 100%;           /* Largura total */
+  height: 150px;         /* Altura fixa */
+}
+
+/* Indices de valor redondos e flutuantes */
+.tpl-emp-004_indice-valor {
+  background-color: #ccc; /* Fundo cinza */
+  border-radius: 50%;     /* Forma circular */
+  padding: 20px;          /* Espaçamento interno */
+  float: left;            /* Flutua à esquerda */
+  margin-right: 10px;     /* Espaço à direita */
+}
+
+/* Clearfix após valores para manter fluxo */
+.tpl-emp-004_valor::after {
+  content: "";   /* Elemento vazio */
+  display: block; /* Exibe como bloco */
+  clear: both;    /* Limpa floats anteriores */
+}
+
+/* Ajuste para span dentro de indice-valor */
+.tpl-emp-004_indice-valor > span {
+  text-align: center;     /* Centraliza texto */
+  display: inline-block;  /* Permite dimensões */
+  width: 20px;            /* Largura fixa */
+  height: 20px;           /* Altura fixa */
+}
+
+/* Separação entre valores */
+.tpl-emp-004_valor {
+  margin-bottom: 12px; /* Espaço abaixo de cada valor */
+}
+
+/* === ABAS RESPONSIVAS === */
+/* Estilos para telas grandes (>=992px) */
+@media screen and (min-width: 992px) {
+  .tbl-abas {
+    height: 60px; /* Altura fixa para container de abas */
+  }
+
+  .tbl-abas-title > div {
+    float: left;         /* Flutua títulos lado a lado */
+    display: inline-block; /* Mantém dimensões inline */
+  }
+}
+
+/* Título de cada aba */
+.tbl-abas-title > div {
+  text-align: center;          /* Centraliza texto */
+  transition: background-color 0.3s; /* Animação de cor */
+  padding: 20px;               /* Espaçamento interno */
+}
+
+/* Cursor pointer ao hover nas abas */
+.tbl-abas-title > div:hover {
+  cursor: pointer; /* Indica elemento clicável */
+}
+
+/* Corpo de conteúdo para cada aba */
+.tbl-box-conteudo {
+  margin-bottom: 10px; /* Espaço abaixo do conteúdo */
+  padding: 30px;       /* Espaçamento interno */
+}
+
+/* === TEMPLATE SOBRE VÍDEO (BORDAS QUADRADOS) === */
+/* Container principal com padding e posicionamento */
+.tplt-sv-md1 .bx-br-md1 {
+  padding: 60px 40px; /* Espaçamento interno generoso */
+  position: relative; /* Permite posicionar bordas absolutas */
+}
+
+/* Classes de quadrados nas bordas */
+.tplt-sv-md1 .sqd {
+  position: absolute; /* Posicionado dentro do container */
+  width: 50px;        /* Largura fixa */
+  height: 50px;       /* Altura fixa */
+  border-style: solid;/* Tipo de borda sólida */
+  border-width: 0;    /* Inicia sem bordas visíveis */
+}
+
+/* Quadrado canto superior esquerdo */
+.tplt-sv-md1 .sqd-lt {
+  top: 0; left: 0;         /* Posiciona no canto */
+  border-left-width: 3px;  /* Borda esquerda visível */
+  border-top-width: 3px;   /* Borda superior visível */
+}
+/* Quadrado canto inferior esquerdo */
+.tplt-sv-md1 .sqd-lb {
+  bottom: 0; left: 0;
+  border-left-width: 3px;
+  border-bottom-width: 3px;
+}
+/* Quadrado canto superior direito */
+.tplt-sv-md1 .sqd-rt {
+  top: 0; right: 0;
+  border-right-width: 3px;
+  border-top-width: 3px;
+}
+/* Quadrado canto inferior direito */
+.tplt-sv-md1 .sqd-rb {
+  bottom: 0; right: 0;
+  border-right-width: 3px;
+  border-bottom-width: 3px;
+}
+
+/* Título principal do vídeo com responsividade */
+.tplt-sv-md1 .ttl-main {
+  font-size: 35px;    /* Tamanho base da fonte */
+  font-weight: 100;   /* Peso de fonte fino */
+  line-height: 1.2;   /* Espaçamento entre linhas */
+  letter-spacing: 0.01em; /* Espaçamento entre letras */
+  text-align: center; /* Centralizado */
+}
+
+/* Ajustes de tamanho para telas médias e grandes */
+@media screen and (min-width: 768px) {
+  .tplt-sv-md1 .ttl-main {
+    font-size: 45px; /* Aumenta o tamanho da fonte */
+  }
+}
+@media screen and (min-width: 992px) {
+  .tplt-sv-md1 .ttl-main {
+    font-size: 48px; /* Aumenta novamente */
+  }
+}
+@media screen and (min-width: 1200px) {
+  .tplt-sv-md1 .ttl-main {
+    font-size: 55px; /* Maior para telas muito grandes */
+  }
+}
+
+/* Subtítulo do vídeo */
+.tplt-sv-md1 .ttl-sub {
+  font-size: 19px;   /* Tamanho menor */
+  text-align: center; /* Centralizado */
+}
+
+/* Botão padrão sob o título do vídeo */
+.tplt-sv-md1 .btn-default {
+  border-radius: 0;       /* Borda quadrada */
+  transition: 0.3s;       /* Transição suave */
+  position: relative;     /* Permitindo deslocamento */
+  top: -10px;             /* Sobe acima do container */
+  margin: 0;              /* Sem margens extras */
+}
+
+/* Ajustes para telas pequenas (<=767px) */
+@media screen and (max-width: 767px) {
+  .tplt-sv-md1 .btn-default {
+    top: 10px;          /* Posiciona abaixo */
+    display: block;     /* Exibe como bloco */
+  }
+  .tplt-sv-md1 .bx-br-md1 {
+    padding: 20px 10px; /* Reduz padding */
+  }
+  .tplt-sv-md1 .ttl-main {
+    font-size: 22px;    /* Reduz fonte */
+  }
+  .tplt-sv-md1 .ttl-sub {
+    font-size: 12px;    /* Reduz subtítulo */
+  }
+}
+
+/* === TEMPLATE SOBRE VÍDEO 002 (DESCRIÇÃO DINÂMICA) === */
+/* Título dinâmico com caixa alta */
+.tplt-sv-0002-title {
+  font-size: 30px;          /* Tamanho base */
+  font-weight: 700;         /* Negrito forte */
+  text-transform: uppercase; /* Caixa alta */
+  line-height: 1em;         /* Altura da linha */
+  margin-top: 15px;         /* Espaço acima */
+}
+
+/* Ajustes progressivos de tamanho */
+@media screen and (min-width: 768px) {
+  .tplt-sv-0002-title {
+    font-size: 35px; /* Aumenta em telas médias */
+  }
+}
+@media screen and (min-width: 992px) {
+  .tplt-sv-0002-title {
+    font-size: 40px; /* Aumenta em telas grandes */
+  }
+}
+@media screen and (min-width: 1200px) {
+  .tplt-sv-0002-title {
+    font-size: 45px;    /* Maior para desktops */
+    min-height: 130px;  /* Altura mínima */
+    line-height: inherit; /* Mantém altura da linha */
+  }
+}
+
+/* Cursor animado para efeito de digitação */
+.tplt-sv-0002-cursor {
+  font-weight: 600;            /* Negrito médio */
+  animation: cursorAlert 0.6s infinite; /* Pisca continuamente */
+}
+
+/* Barra separadora abaixo do título */
+.tplt-sv-0002-separator {
+  border-top: 3px solid rgba(255, 255, 255, 0.2); /* Linha semi-transparente */
+  width: 5%;    /* Largura relativa */
+  margin: 5px auto 20px; /* Centralizada com margens */
+}
+
+/* Texto suplementar em caixa alta com espaçamento */
+.tplt-sv-0002-supertitle {
+  letter-spacing: 8px;       /* Espaçamento entre letras */
+  font-size: 10px;           /* Texto pequeno */
+  text-transform: uppercase; /* Caixa alta */
+}
+
+/* Definição da animação cursorAlert */
+@keyframes cursorAlert {
+  0%, 100% {
+    opacity: 1;   /* Totalmente visível */
+  }
+  50% {
+    opacity: 0.2; /* Parcialmente transparente */
+  }
+}

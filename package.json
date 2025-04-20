@@ -1,0 +1,21 @@
+{
+    "name": "clinica-veterinaria-vetrix",
+    "version": "1.0.0",
+    "description": "Website da Clínica Veterinária Vetrix",
+    "main": "index.html",
+    "scripts": {
+      "start": "live-server",
+      "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [
+      "clínica",
+      "veterinária",
+      "pet",
+      "animais"
+    ],
+    "author": "Seu Nome (ou Nome da Equipe)",
+    "license": "ISC",
+    "devDependencies": {
+      "live-server": "^5.7.0"
+    }
+  }

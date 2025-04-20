@@ -1,0 +1,397 @@
+/* Define estilo base do corpo da página */
+body {
+  /* Fonte padrão de todo o site, com fallback para fontes sem serifa */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  /* Remove margens externas padrão */
+  margin: 0;
+  /* Remove espaçamentos internos padrão */
+  padding: 0;
+  /* Define cor de fundo creme claro para todo o site */
+  background-color: #fff8f0;
+  /* Define cor padrão de texto cinza escuro */
+  color: #333;
+}
+
+/* Estilo para links que envolvem a logo */
+.logo-link {
+  /* Remove o sublinhado padrão dos links */
+  text-decoration: none;
+  /* Permite controlar dimensões como bloco inline */
+  display: inline-block;
+}
+
+/* Estilo da imagem da logo */
+.logo {
+  /* Deixa a largura automática para preservar proporção */
+  width: auto;
+  /* Define altura fixa para caber no header */
+  height: 100px;
+  /* Exibe como inline-block para alinhamento */
+  display: inline-block;
+  /* Alinha verticalmente ao centro em relação a elementos irmãos */
+  vertical-align: middle;
+  /* Espaço à direita para separar do título */
+  margin-right: 1rem;
+}
+
+/* Estilização do cabeçalho principal */
+header {
+  /* Cor de fundo roxo escuro */
+  background-color: #26095c;
+  /* Texto em branco para contraste */
+  color: white;
+  /* Espaçamento interno: 1rem vertical e 2rem horizontal */
+  padding: 1rem 2rem;
+  /* Sombra suave abaixo do header */
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  /* Usa Flexbox para layout dos itens internos */
+  display: flex;
+  /* Alinha itens verticalmente no centro */
+  align-items: center;
+  /* Distribui espaço entre logo/título e menu */
+  justify-content: space-between;
+}
+
+/* Agrupa título e slogan para controle de alinhamento */
+header > div {
+  /* Alinha texto à esquerda dentro do contêiner */
+  text-align: left;
+}
+
+/* Título principal no header */
+header h1 {
+  /* Remove margem padrão */
+  margin: 0;
+  /* Tamanho da fonte ajustado para 2rem */
+  font-size: 2rem;
+}
+
+/* Subtítulo/slogan no header */
+header p {
+  /* Pequena margem superior para espaçamento */
+  margin-top: 0.25rem;
+  /* Definição de tamanho da fonte */
+  font-size: 1rem;
+}
+
+/* Seções gerais recebem padding e texto centralizado */
+section {
+  /* Espaçamento interno de 2rem em todos os lados */
+  padding: 2rem;
+  /* Centraliza texto dentro das seções */
+  text-align: center;
+}
+
+/* Lista de especialidades dentro de .servicos */
+.servicos ul {
+  /* Remove marcadores da lista */
+  list-style-type: none;
+  /* Remove padding padrão */
+  padding: 0;
+  /* Espaço superior para separar dos cards */
+  margin-top: 1rem;
+  /* Exibe itens em linha usando Flexbox */
+  display: flex;
+  /* Permite quebra de linha automática */
+  flex-wrap: wrap;
+  /* Centraliza os itens dentro do container */
+  justify-content: center;
+  /* Espaçamento uniforme entre os itens */
+  gap: 1rem;
+}
+
+/* Estilo de cada botão de especialidade */
+.servicos ul li {
+  /* Cor de fundo laranja claro */
+  background-color: #ffbf69;
+  /* Espaçamento interno em Y e X */
+  padding: 0.75rem 1.25rem;
+  /* Cantos arredondados */
+  border-radius: 12px;
+  /* Texto em negrito */
+  font-weight: bold;
+  /* Texto branco para contraste */
+  color: white;
+  /* Sombra suave para destaque */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Contêiner de cada card de serviço */
+.servico {
+  /* Margem vertical e horizontal automática */
+  margin: 1rem auto;
+  /* Largura máxima para limitar o tamanho do card */
+  max-width: 600px;
+}
+
+/* Imagem dentro do card de serviço */
+.servico img {
+  /* Ocupa 100% da largura do contêiner */
+  width: 100%;
+  /* Bordas arredondadas */
+  border-radius: 12px;
+  /* Sombra suave para destaque */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Seção da equipe com fundo diferenciado */
+.equipe {
+  /* Cor de fundo verde-água clara */
+  background-color: #cbf3f0;
+  /* Espaçamento interno maior verticalmente */
+  padding: 3rem 2rem;
+}
+
+/* Cartão de cada membro da equipe */
+.membro {
+  /* Exibe como bloco inline para vários cards lado a lado */
+  display: inline-block;
+  /* Espaçamento ao redor de cada cartão */
+  margin: 1rem;
+  /* Centraliza texto dentro do cartão */
+  text-align: center;
+}
+
+/* Foto do membro da equipe */
+.membro img {
+  /* Formato circular */
+  border-radius: 50%;
+  /* Tamanho fixo para consistência */
+  width: 150px;
+  height: 150px;
+  /* Cobre completamente o contêiner mantendo proporção */
+  object-fit: cover;
+  /* Sombra suave ao redor da imagem */
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+/* Seção do formulário de contato */
+.formulario {
+  /* Fundo verde-água escuro */
+  background-color: #2ec4b6;
+  /* Texto branco para contraste */
+  color: white;
+  /* Espaçamento interno para conforto visual */
+  padding: 2rem;
+  /* Bordas arredondadas */
+  border-radius: 12px;
+  /* Limita largura máxima */
+  max-width: 600px;
+  /* Centraliza formulário na página */
+  margin: 2rem auto;
+  /* Sombra mais intensa para destaque */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* Layout do formulário usando Flexbox */
+form {
+  /* Exibe campos em coluna */
+  display: flex;
+  flex-direction: column;
+  /* Espaço uniforme entre campos */
+  gap: 1rem;
+}
+
+/* Estilo para campos de texto e e-mail */
+input[type="text"],
+input[type="email"] {
+  /* Espaçamento interno para clicar confortavelmente */
+  padding: 0.75rem;
+  /* Bordas arredondadas suaves */
+  border-radius: 8px;
+  /* Remove borda padrão */
+  border: none;
+  /* Tamanho da fonte legível */
+  font-size: 1rem;
+}
+
+/* Botão de envio do formulário */
+button {
+  /* Fundo laranja vibrante */
+  background-color: #ff9f1c;
+  /* Texto branco */
+  color: white;
+  /* Espaçamento interno */
+  padding: 0.75rem;
+  /* Remove borda padrão */
+  border: none;
+  /* Bordas arredondadas */
+  border-radius: 8px;
+  /* Tamanho da fonte */
+  font-size: 1rem;
+  /* Muda cursor ao passar sobre o botão */
+  cursor: pointer;
+  /* Transição suave de cor no hover */
+  transition: background-color 0.3s;
+}
+
+/* Efeito hover para o botão */
+button:hover {
+  /* Tom de laranja mais escuro ao passar o mouse */
+  background-color: #ff7f0f;
+}
+
+/* Estilo do rodapé */
+footer {
+  /* Centraliza texto */
+  text-align: center;
+  /* Espaçamento interno */
+  padding: 1rem;
+  /* Fundo laranja */
+  background-color: #ff9f1c;
+  /* Texto branco */
+  color: white;
+  /* Espaço acima para separar do conteúdo */
+  margin-top: 2rem;
+}
+
+/* Container para slideshow de imagens */
+.slideshow-container {
+  /* Envolvimento relativo para posicionamento de controles */
+  position: relative;
+  /* Largura máxima 100% */
+  max-width: 100%;
+  /* Centraliza horizontalmente */
+  margin: auto;
+  /* Esconde partes que ultrapassarem o container */
+  overflow: hidden;
+}
+
+/* Cada slide inicialmente oculto */
+.mySlides {
+  display: none;
+}
+
+/* Imagens dentro dos slides ocupam toda largura */
+.mySlides img {
+  width: 100%;
+  height: auto;
+}
+
+/* Classe para aplicar animação de fade */
+.fade {
+  /* Animação definida no keyframes 'fade' */
+  animation: fade 1.5s ease-in-out;
+}
+
+/* Definição da animação fade */
+@keyframes fade {
+  from { opacity: .4; } /* Inicia quase transparente */
+  to { opacity: 1; }   /* Termina completamente opaco */
+}
+
+/* Ajustes para a imagem de capa (hero) */
+.capa-container img {
+  /* Ocupa toda largura do container */
+  width: 100%;
+  /* Bordas levemente arredondadas */
+  border-radius: 10px;
+  /* Espaço abaixo da imagem */
+  margin-bottom: 20px;
+  /* Remove espaços extras abaixo da imagem */
+  display: block;
+  /* Cobre o container mantendo proporção */
+  object-fit: cover;
+  /* Altura automática baseada na largura */
+  height: auto;
+}
+
+/* Contêiner de serviços com layout flexível */
+.servicos-container {
+  /* Exibe itens em linha */
+  display: flex;
+  /* Espaço entre itens */
+  gap: 20px;
+  /* Espaço abaixo do container */
+  margin-bottom: 20px;
+  /* Permite quebra em múltiplas linhas */
+  flex-wrap: wrap;
+  /* Centraliza itens horizontalmente */
+  justify-content: center;
+  /* Remove marcadores e padding padrão */
+  list-style-type: none;
+  padding: 0;
+}
+
+/* Cada card de serviço flexível */
+.servico {
+  /* Itens crescem igualmente */
+  flex: 1;
+  /* Largura mínima para legibilidade */
+  min-width: 300px;
+}
+
+/* Imagens dos serviços com estilo uniforme */
+.servico img {
+  /* Largura total do contêiner */
+  width: 100%;
+  border-radius: 10px;
+  display: block;
+  object-fit: cover;
+  height: auto;
+  /* Espaço abaixo da imagem */
+  margin-bottom: 10px;
+}
+
+/* Texto de descrição dos serviços centralizado */
+.servico p {
+  text-align: center;
+}
+
+/* Responsividade para telas menores (até 768px) */
+@media (max-width: 768px) {
+  /* Coluna na lista de serviços */
+  .servicos-container {
+    flex-direction: column;
+  }
+
+  /* Remove largura mínima nos cards */
+  .servico {
+    min-width: auto;
+  }
+}
+
+/* Estilo do menu como botões */
+.menu-container {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style-type: none;
+  padding: 0;
+  margin-top: 1rem;
+}
+
+/* Botões do menu aplicados em <li> e <a> */
+.menu-container li,
+.menu-container a {
+  background-color: #ffbf69;
+  padding: 0.75rem 1.25rem;
+  border-radius: 12px;
+  font-weight: bold;
+  color: white;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  text-decoration: none;
+  display: inline-block;
+}
+
+/* Efeito hover no menu */
+.menu-container a:hover {
+  background-color: #ff7f0f;
+}
+
+/* Ajustes responsivos para menu em telas menores */
+@media (max-width: 768px) {
+  .menu-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .menu-container li,
+  .menu-container a {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 0.5rem;
+  }
+}

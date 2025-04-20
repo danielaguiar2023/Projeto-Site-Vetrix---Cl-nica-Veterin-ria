@@ -1,0 +1,105 @@
+<!DOCTYPE html> <!-- Declara o tipo de documento como HTML5 -->
+<html lang="pt-BR"> <!-- Inicia o elemento raiz <html> e define o idioma como Português do Brasil -->
+
+<head> <!-- Seção de metadados e links externos -->
+    <meta charset="UTF-8"> <!-- Define a codificação de caracteres para UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Torna o layout responsivo ao ajustar a largura ao dispositivo -->
+    <title>Vetrix - Clínica Veterinária</title> <!-- Título da página exibido na aba do navegador -->
+    <link rel="icon" href="img/Clínica Vetrix.png" type="image/png"> <!-- Ícone (favicon) da página -->
+    <link rel="stylesheet" href="styles.css"> <!-- Importa o arquivo CSS principal -->
+    <link rel="stylesheet" href="mobilidade.css"> <!-- Importa o CSS para estilos de mídia e responsividade -->
+    
+    <style> /*Estilos internos específicos*/
+        html {
+            scroll-behavior: smooth; /*Habilita rolagem suave ao navegar por âncoras*/
+        }
+    </style>
+</head>
+
+<body> <!-- Início do conteúdo visível da página -->
+    <header id="inicio"> <!-- Cabeçalho principal com identificador para navegação interna -->
+        <a href="#inicio" class="logo-link"> <!-- Link de retorno ao topo da página -->
+            <img src="img/Clínica_Vetrix-removebg-preview.png" alt="Logo Vetrix" class="logo"> <!-- Logo da clínica -->
+        </a>
+        <div> <!-- Contêiner para título e subtítulo -->
+            <h1>Vetrix - Clínica Veterinária</h1> <!-- Título principal da página -->
+            <h3>Especialistas cuidando do seu melhor amigo!</h3> <!-- Slogan ou subtítulo -->
+        </div>
+        <nav> <!-- Navegação principal -->
+            <ul class="menu-container"> <!-- Lista de itens de menu -->
+                <li><a href="#inicio">Home</a></li> <!-- Link para seção "inicio" -->
+                <li><a href="#servicos">Serviços</a></li> <!-- Link para seção "servicos" -->
+                <li><a href="#especialidades">Especialidades</a></li> <!-- Link para seção "especialidades" -->
+                <li><a href="#contato">Contato</a></li> <!-- Link para seção "contato" -->
+            </ul>
+        </nav>
+    </header>
+
+    <div class="capa-container"> <!-- Seção de imagem de capa (hero) -->
+        <img src="img/capaimg.png.png" alt="Imagem de Capa"> <!-- Imagem destacada na página inicial -->
+    </div>
+
+    <section class="servicos" id="servicos"> <!-- Seção de serviços oferecidos -->
+        <h1>Nossos Serviços</h1> <!-- Título da seção -->
+        <div class="servicos-container"> <!-- Contêiner para cards de serviços -->
+            <div class="servico"> <!-- Card de um serviço -->
+                <img src="img/clinicamedica.png.png" alt="Clínica Médica"> <!-- Ícone ou imagem do serviço -->
+                <p>Atendimento clínico completo com profissionais especializados para o bem-estar do seu pet.</p> <!-- Descrição do serviço -->
+            </div>
+            <div class="servico"> <!-- Segundo card de serviço -->
+                <img src="img/cirurgiaveterinaria.png" alt="Cirurgia em geral"> <!-- Imagem representando cirurgia -->
+                <p>Realizamos diversos tipos de cirurgias com equipamentos modernos e equipe qualificada.</p> <!-- Descrição detalhada -->
+            </div>
+        </div>
+        <ul> <!-- Lista de especialidades complementares -->
+            <li>Clínica Médica</li>
+            <li>Ortopedia</li>
+            <li>Neurologia</li>
+            <li>Cardiologia</li>
+            <li>Fisioterapia</li>
+            <li>Internação</li>
+            <li>Cirurgia em geral</li>
+        </ul>
+    </section>
+
+    <section class="equipe" id="especialidades"> <!-- Seção apresentando a equipe de especialistas -->
+        <h2>Nossa Equipe</h2> <!-- Título da seção de equipe -->
+        <div class="membro"> <!-- Cartão de membro da equipe -->
+            <img src="img/draanaclinicamedica.png" alt="Dra. Ana"> <!-- Foto da Dra. Ana -->
+            <p>Dra. Ana Souza - Médica Veterinária (Clínica Geral)</p> <!-- Nome e especialidade -->
+        </div>
+        <div class="membro"> <!-- Cartão de outro membro -->
+            <img src="img/drcarlosortopedia.png" alt="Dr. Carlos"> <!-- Foto do Dr. Carlos -->
+            <p>Dr. Carlos Lima - Ortopedista e Neurologista </p> <!-- Nome e especialidades -->
+        </div>
+        <div class="membro"> <!-- Cartão de mais um membro -->
+            <img src="img/drafernandacardiologista.png" alt="Dra. Fernanda"> <!-- Foto da Dra. Fernanda -->
+            <p>Dra. Fernanda Alves - Cardiologista</p> <!-- Nome e especialidade -->
+        </div>
+    </section>
+
+    <section class="formulario" id="contato"> <!-- Seção de contato com formulário para captação de leads -->
+        <h2>Preencha o Formulário para mais informações</h2> <!-- Título do formulário -->
+        <form> <!-- Início do formulário -->
+            <label for="nome">Nome:</label> <!-- Rótulo para campo nome -->
+            <input type="text" id="nome" name="nome" required> <!-- Campo de texto obrigatório para nome -->
+
+            <label for="email">E-mail:</label> <!-- Rótulo para campo e-mail -->
+            <input type="email" id="email" name="email" required> <!-- Campo de e-mail obrigatório -->
+
+            <label for="cidade">Telefone:</label> <!-- Rótulo incorreto de "for", deve ser "telefone" -->
+            <input type="text" id="telefone" name="telefone" required> <!-- Campo de texto obrigatório para telefone -->
+
+            <label for="cidade">Cidade/Estado:</label> <!-- Rótulo para campo cidade/estado -->
+            <input type="text" id="cidade" name="cidade" required> <!-- Campo de texto obrigatório para cidade/estado -->
+
+            <button type="submit">Enviar</button> <!-- Botão para submeter o formulário -->
+        </form> <!-- Fim do formulário -->
+    </section>
+
+    <footer> <!-- Rodapé da página -->
+        <p>&copy; 2025 Vetrix - Clínica Veterinária. Todos os direitos reservados.</p> <!-- Texto de direitos autorais -->
+    </footer>
+</body>
+
+</html> <!-- Fim do documento HTML -->
